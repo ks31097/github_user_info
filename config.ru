@@ -9,4 +9,4 @@ require_relative 'app/controllers/application_controller'
 # bundle exec puma -p 3000
 use Rack::CommonLogger
 use Rack::Reloader, 0
-run App.new
+run Action::Application.new

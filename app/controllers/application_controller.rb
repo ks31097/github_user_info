@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
-class App
-  def call(env)
-    [
-      200,
-      { 'content-type': 'text/html' },
-      ['Hello World!']
-    ]
+require 'pry'
+require 'erb'
+require './app/helpers/application_helper'
+
+module Action
+  class Application
+    include ApplicationHelper
+
+    def call(env)
+      render('home')
+    end
   end
 end
