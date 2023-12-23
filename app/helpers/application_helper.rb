@@ -4,7 +4,7 @@ module ApplicationHelper
   def render(template, status_code: 200)
     @page_content = render_template(template)
     body = render_template('layout')
-    headers = { 'content-type': 'text/html' }
+    headers = { 'content-type' => 'text/html' }
 
     [status_code, headers, [body]]
   end
